@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sydney Tamuno Tonye | WDD 231 Home</title>
+  <meta name="description" content="WDD 231 home page for Sydney Tamuno Tonye: course highlights, the dynamic Web and Computer Programming certificate course list, and links to the Chamber of Commerce and Final projects.">
+  <meta name="author" content="Sydney Tamuno Tonye">
+  <meta name="theme-color" content="#0f3b36">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <script src="script/main.mjs" type="module"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.svg" alt="" width="48" height="48" class="brand__logo">
+        <span class="brand__name">Sydney Tamuno Tonye</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="primaryNav">
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <nav class="site-nav" id="primaryNav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="chamber/index.html">Chamber</a></li>
+          <li><a href="final/index.html">Final</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <h1>Home</h1>
+
+    <section class="panel panel--hero" aria-labelledby="hero-heading">
+      <div class="panel__content">
+        <h2 id="hero-heading">Home</h2>
+        <p>
+          I am Sydney Tamuno Tonye, a software development student in Nigeria
+          studying through BYU&ndash;Idaho. This site collects the projects I
+          build while learning accessible, responsive, front-end web
+          development in WDD&nbsp;231.
+        </p>
+        <p>
+          Each project starts from semantic HTML, layers on a mobile-first
+          stylesheet, and finishes with a small amount of well-tested
+          JavaScript. The two project links in the navigation lead to the
+          Chamber of Commerce build (week 2) and the Final project (week 6),
+          while this page tracks my progress through the introductory
+          certificate.
+        </p>
+        <ul class="hero__stats">
+          <li>
+            <span class="hero__stat-value" id="heroCredits">&ndash;</span>
+            <span class="hero__stat-label">Credits in the certificate</span>
+          </li>
+          <li>
+            <span class="hero__stat-value" id="heroCompleted">&ndash;</span>
+            <span class="hero__stat-label">Courses completed</span>
+          </li>
+          <li>
+            <span class="hero__stat-value">3</span>
+            <span class="hero__stat-label">Live projects</span>
+          </li>
+        </ul>
+      </div>
+      <figure class="panel__figure">
+        <img src="images/hero-code.svg" alt="Illustration of a browser window showing a page being laid out with HTML and CSS" width="640" height="420" decoding="async">
+      </figure>
+    </section>
+
+    <section class="panel panel--courses" aria-labelledby="courses-heading">
+      <div class="panel__content">
+        <h2 id="courses-heading">Certificate Courses</h2>
+        <p>
+          The course list below is generated from a JavaScript array of course
+          objects. Use the filters to show every course, only the WDD courses,
+          or only the CSE courses. Courses I have finished are marked with a
+          check badge and a warmer card colour.
+        </p>
+
+        <div class="filters" role="group" aria-label="Filter courses">
+          <button class="filters__btn is-active" id="filterAll" type="button" data-filter="all" aria-pressed="true">All Courses</button>
+          <button class="filters__btn" id="filterWdd" type="button" data-filter="wdd" aria-pressed="false">WDD Courses</button>
+          <button class="filters__btn" id="filterCse" type="button" data-filter="cse" aria-pressed="false">CSE Courses</button>
+        </div>
+
+        <p class="credits" id="creditsTotal" aria-live="polite">Total credits: &ndash;</p>
+
+        <div class="course-grid" id="courseGrid"></div>
+        <noscript>
+          <p class="notice">JavaScript builds the course cards, so turn it on to see the full list.</p>
+        </noscript>
+      </div>
+    </section>
+
+    <section class="panel panel--certificate" aria-labelledby="certificate-heading">
+      <div class="panel__content">
+        <h2 id="certificate-heading">Web and Computer Programming</h2>
+        <p>
+          This page tracks the first certificate of the Software Development
+          degree. It covers the fundamentals of markup, styling, and scripting
+          before the work moves on to server-side development, databases, and
+          mobile apps.
+        </p>
+        <ol class="pathway">
+          <li>
+            <strong>Foundations</strong>
+            <span>Semantic HTML, responsive CSS layout, and the box model.</span>
+          </li>
+          <li>
+            <strong>Interaction</strong>
+            <span>The DOM, events, fetching data, and building small applications.</span>
+          </li>
+          <li>
+            <strong>Object-oriented programming</strong>
+            <span>Classes, collections, testing, and reusable components.</span>
+          </li>
+          <li>
+            <strong>Full-stack craft</strong>
+            <span>Working with APIs, data services, and a final publishable project.</span>
+          </li>
+        </ol>
+        <figure class="panel__figure panel__figure--inline">
+          <img src="images/hero-roadmap.svg" alt="Illustration of a learning path stepping from markup, through styling and scripting, to a finished project" width="640" height="360" loading="lazy" decoding="async">
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__item site-footer__social">
+        <a href="https://github.com/Sydneytamunotonye" aria-label="Sydney Tamuno Tonye on GitHub">
+          <img src="images/github.svg" alt="" width="32" height="32" class="social-icon" loading="lazy">
+        </a>
+        <a href="https://www.linkedin.com/in/sydney-tamuno-t0nye" aria-label="Sydney Tamuno Tonye on LinkedIn">
+          <img src="images/linkedin.svg" alt="" width="32" height="32" class="social-icon" loading="lazy">
+        </a>
+        <a href="https://x.com/" aria-label="Sydney Tamuno Tonye on X">
+          <img src="images/x.svg" alt="" width="32" height="32" class="social-icon" loading="lazy">
+        </a>
+        <a href="https://www.instagram.com/" aria-label="Sydney Tamuno Tonye on Instagram">
+          <img src="images/instagram.svg" alt="" width="32" height="32" class="social-icon" loading="lazy">
+        </a>
+      </div>
+
+      <div class="site-footer__item site-footer__identity">
+        <p>&copy; <span id="currentyear"></span> Sydney Tamuno Tonye</p>
+        <p>Nigeria</p>
+      </div>
+
+      <div class="site-footer__item site-footer__modified">
+        <p id="lastModified"></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

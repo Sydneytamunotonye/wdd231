@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="heroTitle heroDesc">
+  <title id="heroTitle">Browser window with an HTML page being laid out</title>
+  <desc id="heroDesc">A stylised browser showing a header, a two-column content area, and a set of code tags floating beside it.</desc>
+  <rect width="640" height="420" fill="#0f3b36" rx="18"/>
+  <!-- window -->
+  <rect x="64" y="64" width="512" height="292" rx="12" fill="#fbf7ef"/>
+  <rect x="64" y="64" width="512" height="34" rx="12" fill="#e6d9c3"/>
+  <rect x="64" y="86" width="512" height="12" fill="#e6d9c3"/>
+  <circle cx="88" cy="81" r="6" fill="#b06f12"/>
+  <circle cx="108" cy="81" r="6" fill="#f2c879"/>
+  <circle cx="128" cy="81" r="6" fill="#14504a"/>
+  <rect x="150" y="74" width="330" height="14" rx="7" fill="#ffffff"/>
+  <!-- header bar -->
+  <rect x="88" y="118" width="464" height="46" rx="8" fill="#0f3b36"/>
+  <rect x="104" y="133" width="92" height="16" rx="8" fill="#f2c879"/>
+  <rect x="420" y="133" width="34" height="14" rx="7" fill="#14504a"/>
+  <rect x="462" y="133" width="34" height="14" rx="7" fill="#14504a"/>
+  <rect x="504" y="133" width="34" height="14" rx="7" fill="#14504a"/>
+  <!-- content -->
+  <rect x="88" y="180" width="252" height="18" rx="9" fill="#14504a"/>
+  <rect x="88" y="208" width="252" height="10" rx="5" fill="#e6d9c3"/>
+  <rect x="88" y="226" width="212" height="10" rx="5" fill="#e6d9c3"/>
+  <rect x="88" y="244" width="232" height="10" rx="5" fill="#e6d9c3"/>
+  <rect x="88" y="274" width="96" height="27" rx="13" fill="#b06f12"/>
+  <rect x="356" y="180" width="196" height="120" rx="10" fill="#e3efec" stroke="#14504a" stroke-width="2"/>
+  <rect x="372" y="196" width="164" height="10" rx="5" fill="#14504a"/>
+  <rect x="372" y="216" width="132" height="8" rx="4" fill="#0f3b36" opacity=".45"/>
+  <rect x="372" y="232" width="150" height="8" rx="4" fill="#0f3b36" opacity=".45"/>
+  <rect x="372" y="256" width="164" height="30" rx="6" fill="#f2c879"/>
+  <!-- code tags -->
+  <text x="500" y="352" font-family="Consolas, monospace" font-size="26" fill="#f2c879">&lt;/&gt;</text>
+  <text x="150" y="356" font-family="Consolas, monospace" font-size="15" fill="#e3efec">flex | grid | a11y</text>
+</svg>

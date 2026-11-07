@@ -1,0 +1,22 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-labelledby="roadTitle">
+
+  <title id="roadTitle">A learning path rising from markup, through styling and scripting, to a finished project</title>
+  <rect width="640" height="360" fill="#eef5f2" rx="14"/>
+  <!-- path -->
+  <path d="M40 300 C150 300 150 210 260 210 C370 210 370 120 480 120 C540 120 560 96 600 88" fill="none" stroke="#14504a" stroke-width="6" stroke-dasharray="14 10" stroke-linecap="round"/>
+  <!-- steps -->
+  <circle cx="40" cy="300" r="18" fill="#0f3b36"/>
+  <circle cx="260" cy="210" r="18" fill="#14504a"/>
+  <circle cx="480" cy="120" r="18" fill="#b06f12"/>
+  <circle cx="600" cy="88" r="22" fill="#0f3b36"/>
+  <path d="M593 88l5 6 9-11" fill="none" stroke="#f2c879" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- labels -->
+  <text x="40" y="340" font-family="Verdana, sans-serif" font-size="14" fill="#0f3b36" text-anchor="middle">Markup</text>
+  <text x="260" y="250" font-family="Verdana, sans-serif" font-size="14" fill="#0f3b36" text-anchor="middle">Styling</text>
+  <text x="480" y="160" font-family="Verdana, sans-serif" font-size="14" fill="#0f3b36" text-anchor="middle">Scripting</text>
+  <text x="560" y="60" font-family="Verdana, sans-serif" font-size="14" fill="#0f3b36" text-anchor="end">Ship it</text>
+  <!-- cards -->
+  <rect x="70" y="236" width="78" height="30" rx="6" fill="#ffffff" stroke="#e6d9c3"/>
+  <rect x="290" y="146" width="78" height="30" rx="6" fill="#ffffff" stroke="#e6d9c3"/>
+  <rect x="470" y="186" width="90" height="30" rx="6" fill="#ffffff" stroke="#e6d9c3"/>
+</svg>

@@ -1,0 +1,135 @@
+/* ==========================================================
+   larger.css - tablet and desktop layouts
+   WDD 231 | Sydney Tamuno Tonye
+   Loaded after small.css. Sizes use em so they follow the
+   browser's user font-size setting.
+   ========================================================== */
+
+:root {
+  --pad: 1.5rem;
+}
+
+/* ---------- 640px and up: real navigation ---------- */
+
+@media screen and (min-width: 40em) {
+  .site-header__inner {
+    flex-wrap: nowrap;
+    padding-block: 0.75rem;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .site-nav {
+    display: block;
+    flex-basis: auto;
+    margin-left: auto;
+  }
+
+  .site-nav ul {
+    flex-direction: row;
+    gap: 0.25rem;
+    padding: 0;
+  }
+
+  .site-nav a {
+    padding: 0.55rem 0.9rem;
+    border-top: 0;
+    border-radius: 0.4rem;
+  }
+
+  .site-nav a[aria-current="page"] {
+    box-shadow: inset 0 -3px 0 var(--gold-300);
+  }
+}
+
+/* ---------- 900px and up: two-column panels ---------- */
+
+@media screen and (min-width: 56.25em) {
+  .brand__name {
+    font-size: 1.15rem;
+  }
+
+  main {
+    padding-block: 1.5rem 3rem;
+  }
+
+  .panel {
+    padding: 2rem;
+  }
+
+  .panel--hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .hero__stats {
+    margin-top: 1.5rem;
+  }
+
+  .course-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .site-footer {
+    padding-block: 2rem;
+  }
+
+  /* Certificate section: intro beside the pathway list */
+  .panel--certificate .panel__content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas:
+      "heading heading"
+      "intro pathway"
+      "figure pathway";
+    column-gap: 2.5rem;
+    align-items: start;
+  }
+
+  .panel--certificate h2 {
+    grid-area: heading;
+  }
+
+  .panel--certificate .panel__content > p {
+    grid-area: intro;
+  }
+
+  .panel--certificate .pathway {
+    grid-area: pathway;
+    margin-bottom: 0;
+  }
+
+  .panel--certificate .panel__figure--inline {
+    grid-area: figure;
+    margin-top: 0.5rem;
+  }
+}
+
+/* ---------- 1200px and up: wider content, four card columns ---------- */
+
+@media screen and (min-width: 75em) {
+  :root {
+    --max-width: 78rem;
+  }
+
+  .course-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .panel--hero {
+    padding: 3rem;
+    gap: 3rem;
+  }
+
+  .panel__figure img {
+    max-height: 26rem;
+    object-fit: contain;
+  }
+}
+
+/* ---------- 1200px and up: wider content, four card columns ---------- */
+

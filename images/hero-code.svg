@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="heroTitle heroDesc">
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" role="img" aria-labelledby="heroTitle heroDesc">
   <title id="heroTitle">Browser window with an HTML page being laid out</title>
   <desc id="heroDesc">A stylised browser showing a header, a two-column content area, and a set of code tags floating beside it.</desc>
   <rect width="640" height="420" fill="#0f3b36" rx="18"/>

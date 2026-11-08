@@ -1,7 +1,6 @@
-// Temporary local preview server for verification only.
-import http from "node:http";
-import fs from "node:fs";
-import path from "node:path";
+import { createServer } from "node:http";
+import { readFile } from "node:fs/promises";
+import { extname, join, normalize } from "node:path";
 
 const root = process.cwd();
 const types = {
@@ -10,22 +9,26 @@ const types = {
   ".mjs": "text/javascript; charset=utf-8",
   ".js": "text/javascript; charset=utf-8",
   ".svg": "image/svg+xml",
+  ".json": "application/json",
+  ".md": "text/markdown; charset=utf-8",
 };
 
-http
-  .createServer((req, res) => {
-    const urlPath = decodeURIComponent(req.url.split("?")[0]);
-    let file = path.join(root, urlPath === "/" ? "index.html" : urlPath);
-    fs.readFile(file, (err, data) => {
-      if (err) {
-        res.writeHead(404, { "Content-Type": "text/plain" });
-        res.end("not found: " + file);
-        return;
-      }
-      res.writeHead(200, {
-        "Content-Type": types[path.extname(file)] ?? "application/octet-stream",
-      });
-      res.end(data);
+createServer(async (req, res) => {
+  const url = new URL(req.url, "http://localhost");
+  let path = normalize(decodeURIComponent(url.pathname));
+  if (path === "/" || path.endsWith("/")) path = path + "index.html";
+
+  try {
+    const body = await readFile(join(root, path));
+    res.writeHead(200, {
+      "Content-Type": types[extname(path)] ?? "application/octet-stream",
+      "Content-Length": body.length,
+      "Cache-Control": "no-store",
     });
-  })
-  .listen(8321, () => console.log("preview on http://localhost:8321"));
+    res.end(body);
+  } catch {
+    const msg = Buffer.from("not found: " + path);
+    res.writeHead(404, { "Content-Type": "text/plain", "Content-Length": msg.length });
+    res.end(msg);
+  }
+}).listen(8321, () => console.log("http://localhost:8321/"));

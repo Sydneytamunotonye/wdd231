@@ -1,16 +1,8 @@
-/**
- * main.mjs
- * Page behaviour for the WDD 231 home page:
- *   1. Footer year + last modified date
- *   2. Accessible hamburger navigation
- *   3. Dynamic course cards, filtering, and credit totals
- */
-
 import { courses } from "./courses.mjs";
 
-/* ------------------------------------------------------------------
-   1. Footer: current year and last modified date
-   ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ *
+ * 1. Footer dates
+ * ------------------------------------------------------------------ */
 
 const yearEl = document.querySelector("#currentyear");
 const modifiedEl = document.querySelector("#lastModified");
@@ -33,11 +25,9 @@ if (modifiedEl) {
   modifiedEl.textContent = `Last Modification: ${date} ${time}`;
 }
 
-/* ------------------------------------------------------------------
-   2. Hamburger navigation
-   The button is read by screen readers as expanded/collapsed and the
-   menu closes on wide screens, on Escape, and after a link is used.
-   ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ *
+ * 2. Responsive navigation
+ * ------------------------------------------------------------------ */
 
 const navToggle = document.querySelector("#navToggle");
 const primaryNav = document.querySelector("#primaryNav");
@@ -60,21 +50,25 @@ if (navToggle && primaryNav) {
   });
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && navToggle.getAttribute("aria-expanded") === "true") {
+    if (
+      event.key === "Escape" &&
+      navToggle.getAttribute("aria-expanded") === "true"
+    ) {
       setNavOpen(false);
       navToggle.focus();
     }
   });
 
-  // Leaving mobile widths should never leave a "closed" desktop menu.
+  // The hamburger disappears at the wide breakpoint, so close the panel
+  // as soon as the layout switches back to the horizontal nav.
   wideScreen.addEventListener("change", (event) => {
     if (event.matches) setNavOpen(false);
   });
 }
 
-/* ------------------------------------------------------------------
-   3. Course cards, filter buttons, and credit totals
-   ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ *
+ * 3. Course list
+ * ------------------------------------------------------------------ */
 
 const courseGrid = document.querySelector("#courseGrid");
 const creditsEl = document.querySelector("#creditsTotal");
@@ -142,15 +136,18 @@ function totalCredits(list) {
   return list.reduce((sum, course) => sum + course.credits, 0);
 }
 
+/**
+ * Redraw the grid for the given filter and update the credit total.
+ * @param {string} filterKey
+ */
 function renderCourses(filterKey) {
   if (!courseGrid) return;
 
   const list = filterCourses(filterKey);
 
-  courseGrid.replaceChildren();
   const fragment = document.createDocumentFragment();
   list.forEach((course) => fragment.append(buildCourseCard(course)));
-  courseGrid.append(fragment);
+  courseGrid.replaceChildren(fragment);
 
   if (creditsEl) {
     creditsEl.textContent = `Total credits: ${totalCredits(list)}`;
@@ -172,10 +169,9 @@ if (courseGrid) {
     });
   });
 
-  // All courses show on first load.
+  // Every course is shown on first load.
   renderCourses("all");
 
-  // Hero summary numbers.
   const heroCredits = document.querySelector("#heroCredits");
   const heroCompleted = document.querySelector("#heroCompleted");
 

@@ -1,14 +1,3 @@
-/**
- * courses.mjs
- * Course data for the Web and Computer Programming certificate.
- *
- * NOTE: this array uses the course-data shape from the WDD 231
- * "Course List Array". If the course handout ships a different array,
- * replace the contents of `courses` below - nothing else needs to change,
- * as long as each object keeps these six properties:
- *   subject, number, title, credits, completed, description
- */
-
 export const courses = [
   {
     subject: "CSE",
@@ -16,8 +5,9 @@ export const courses = [
     title: "Introduction to Programming",
     credits: 2,
     completed: true,
-    description: "An introduction to programming through problem solving, algorithms, and basic Python syntax.",
     certificate: "Web and Computer Programming",
+    description:
+      "An introduction to programming through problem solving, algorithms, and basic Python syntax.",
   },
   {
     subject: "WDD",
@@ -25,8 +15,9 @@ export const courses = [
     title: "Web Fundamentals",
     credits: 2,
     completed: true,
-    description: "Semantic HTML, CSS layout, and the principles of responsive, accessible design.",
     certificate: "Web and Computer Programming",
+    description:
+      "Semantic HTML, CSS layout, and the principles of responsive, accessible design.",
   },
   {
     subject: "CSE",
@@ -34,8 +25,9 @@ export const courses = [
     title: "Programming with Functions",
     credits: 2,
     completed: true,
-    description: "Functions, testing, and clean code through building small data-driven applications in Python.",
     certificate: "Web and Computer Programming",
+    description:
+      "Functions, testing, and clean code through building small data-driven applications in Python.",
   },
   {
     subject: "WDD",
@@ -43,8 +35,9 @@ export const courses = [
     title: "Dynamic Web Fundamentals",
     credits: 3,
     completed: true,
-    description: "Building dynamic interfaces with the DOM, events, object-oriented JavaScript, and asynchronous APIs.",
     certificate: "Web and Computer Programming",
+    description:
+      "Building dynamic interfaces with the DOM, events, object-oriented JavaScript, and asynchronous APIs.",
   },
   {
     subject: "WDD",
@@ -52,8 +45,9 @@ export const courses = [
     title: "Web Frontend Development I",
     credits: 3,
     completed: false,
-    description: "Advanced CSS, JavaScript modules and debugging, dynamic content, and user-centered interface design.",
     certificate: "Web and Computer Programming",
+    description:
+      "Advanced CSS, JavaScript modules and debugging, dynamic content, and user-centered interface design.",
   },
   {
     subject: "CSE",
@@ -61,8 +55,9 @@ export const courses = [
     title: "Programming with Classes",
     credits: 3,
     completed: false,
-    description: "Objects, classes, inheritance, collections, and writing automated tests in C#.",
     certificate: "Web and Computer Programming",
+    description:
+      "Objects, classes, inheritance, collections, and writing automated tests in C#.",
   },
   {
     subject: "WDD",
@@ -70,8 +65,9 @@ export const courses = [
     title: "Web Frontend Development II",
     credits: 3,
     completed: false,
-    description: "Modern tooling, component architecture, state management, and performance-focused frontend work.",
     certificate: "Web and Computer Programming",
+    description:
+      "Modern tooling, component architecture, state management, and performance-focused frontend work.",
   },
   {
     subject: "CSE",
@@ -79,8 +75,9 @@ export const courses = [
     title: "Software Engineering",
     credits: 3,
     completed: false,
-    description: "Agile teamwork, version control workflows, requirements, and iterative delivery of working software.",
     certificate: "Web and Computer Programming",
+    description:
+      "Agile teamwork, version control workflows, requirements, and iterative delivery of working software.",
   },
   {
     subject: "WDD",
@@ -88,8 +85,9 @@ export const courses = [
     title: "Web Services",
     credits: 3,
     completed: false,
-    description: "Designing and consuming REST APIs, authentication, and connecting frontend clients to a backend service.",
     certificate: "Web and Computer Programming",
+    description:
+      "Designing and consuming REST APIs, authentication, and connecting frontend clients to a backend service.",
   },
   {
     subject: "WDD",
@@ -97,7 +95,8 @@ export const courses = [
     title: "Web Full-Stack Development",
     credits: 3,
     completed: false,
-    description: "A capstone build that combines a database, a server-side API, and a production frontend.",
     certificate: "Web and Computer Programming",
+    description:
+      "A capstone build that combines a database, a server-side API, and a production frontend.",
   },
 ];

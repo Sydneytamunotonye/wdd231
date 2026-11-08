@@ -1,10 +1,5 @@
-/* ==========================================================
-   small.css - mobile-first base styles (single column)
-   WDD 231 | Sydney Tamuno Tonye
-   ========================================================== */
-
 :root {
-  /* Brand palette: deep pine + warm sand + a bright accent */
+  /* Brand palette: deep pine, warm sand, and a bright gold accent */
   --pine-900: #0b2a26;
   --pine-800: #0f3b36;
   --pine-700: #14504a;
@@ -18,16 +13,17 @@
   --ink-soft: #3d4b47;
   --white: #ffffff;
 
+  /* Text colours tuned for AA contrast on the dark pine surfaces */
+  --on-dark: #e7efec;
+  --on-dark-soft: #cfe0dc;
+
   --font-body: "Fira Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
   --radius: 0.75rem;
   --shadow-sm: 0 1px 2px rgba(11, 42, 38, 0.12);
-  --shadow-md: 0 6px 18px rgba(11, 42, 38, 0.14);
   --max-width: 72rem;
   --pad: 1rem;
 }
-
-/* ---------- Global ---------- */
 
 *,
 *::before,
@@ -46,7 +42,6 @@ body {
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.6;
-  overflow-x: hidden;
 }
 
 img {
@@ -87,20 +82,19 @@ a:focus-visible {
   color: var(--gold-500);
 }
 
-/* Visible focus for keyboard users only */
 :focus-visible {
   outline: 3px solid var(--gold-500);
   outline-offset: 2px;
 }
 
 .visually-hidden {
-  position: absolute !important;
+  position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
   padding: 0;
   overflow: hidden;
-  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
   white-space: nowrap;
   border: 0;
 }
@@ -127,14 +121,16 @@ a:focus-visible {
   border-left: 4px solid var(--gold-500);
 }
 
-/* ---------- Header ---------- */
+/* ==========================================================================
+   Header and navigation
+   ========================================================================== */
 
 .site-header {
   position: sticky;
   top: 0;
   z-index: 20;
   background-color: var(--pine-800);
-  color: var(--white);
+  color: var(--on-dark);
   box-shadow: var(--shadow-sm);
 }
 
@@ -172,11 +168,9 @@ a:focus-visible {
   font-weight: 700;
   font-size: 1rem;
   line-height: 1.15;
-  /* allow wrapping on very narrow screens instead of overflowing */
   overflow-wrap: anywhere;
 }
 
-/* Hamburger button */
 .nav-toggle {
   display: inline-flex;
   flex-direction: column;
@@ -187,7 +181,7 @@ a:focus-visible {
   padding: 0.55rem;
   background-color: transparent;
   color: var(--white);
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid var(--on-dark-soft);
   border-radius: 0.5rem;
   cursor: pointer;
 }
@@ -217,7 +211,6 @@ a:focus-visible {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Collapsible nav on small screens */
 .site-nav {
   flex-basis: 100%;
   display: none;
@@ -238,18 +231,18 @@ a:focus-visible {
 .site-nav a {
   display: block;
   padding: 0.7rem 0.5rem;
-  color: var(--white);
+  color: var(--on-dark);
   font-weight: 600;
   text-decoration: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  /* Smooth, non-twitching hover: colour only, no layout change */
+  border-top: 1px solid var(--pine-700);
+  /* Smooth hover: colour only, so nothing shifts or twitches */
   transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
   color: var(--gold-300);
-  background-color: rgba(255, 255, 255, 0.07);
+  background-color: var(--pine-700);
 }
 
 .site-nav a[aria-current="page"] {
@@ -258,7 +251,9 @@ a:focus-visible {
   padding-left: 0.85rem;
 }
 
-/* ---------- Main / panels ---------- */
+/* ==========================================================================
+   Page and panels
+   ========================================================================== */
 
 main {
   max-width: var(--max-width);
@@ -266,7 +261,7 @@ main {
   padding: var(--pad) var(--pad) 2rem;
 }
 
-main > h1 {
+main>h1 {
   margin-top: 1rem;
 }
 
@@ -279,7 +274,7 @@ main > h1 {
   margin-bottom: 1.25rem;
 }
 
-.panel__content > p:last-child {
+.panel__content>p:last-child {
   margin-bottom: 0;
 }
 
@@ -297,14 +292,23 @@ main > h1 {
   margin-top: 0.5rem;
 }
 
-/* Hero */
+
 .panel--hero {
-  background: linear-gradient(160deg, var(--pine-800), var(--pine-700) 70%, var(--pine-900));
-  color: var(--white);
+  background-color: var(--pine-800);
+  background-image: linear-gradient(160deg, var(--pine-800), var(--pine-700) 70%, var(--pine-900));
+  color: var(--on-dark);
   border-color: var(--pine-900);
 }
 
+.panel--hero h2 {
+  color: var(--white);
+}
+
 .panel--hero a {
+  color: var(--gold-300);
+}
+
+.panel--hero .hero__stat-value {
   color: var(--gold-300);
 }
 
@@ -317,7 +321,8 @@ main > h1 {
 }
 
 .hero__stats li {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--pine-700);
+  border: 1px solid var(--pine-900);
   border-radius: 0.5rem;
   padding: 0.65rem 0.85rem;
   text-align: center;
@@ -334,10 +339,9 @@ main > h1 {
 .hero__stat-label {
   display: block;
   font-size: 0.875rem;
-  color: #dbe7e4;
+  color: var(--on-dark);
 }
 
-/* ---------- Filters & credits ---------- */
 
 .filters {
   display: flex;
@@ -375,12 +379,9 @@ main > h1 {
   margin: 0 0 1rem;
 }
 
-/* ---------- Course cards ---------- */
-
 .course-grid {
   display: grid;
   gap: 0.85rem;
-  /* Cards are keyed by course so filtering never leaves a gap */
   grid-auto-rows: auto;
 }
 
@@ -395,7 +396,7 @@ main > h1 {
 
 .course-card--completed {
   border-left-color: var(--gold-500);
-  background-color: #fff8e8;
+  background-color: var(--sand-100);
 }
 
 .course-card__head {
@@ -427,13 +428,12 @@ main > h1 {
 
 .badge--completed {
   background-color: var(--gold-300);
-  color: #4a2c00;
+  color: var(--pine-900);
 }
 
 .course-card__title {
   margin: 0 0 0.4rem;
   font-weight: 600;
-  color: var(--ink);
 }
 
 .course-card__meta {
@@ -447,8 +447,6 @@ main > h1 {
   font-size: 0.9rem;
   color: var(--ink-soft);
 }
-
-/* ---------- Certificate pathway ---------- */
 
 .pathway {
   counter-reset: step;
@@ -495,11 +493,9 @@ main > h1 {
   color: var(--ink-soft);
 }
 
-/* ---------- Footer ---------- */
-
 .site-footer {
   background-color: var(--pine-900);
-  color: #dbe7e4;
+  color: var(--on-dark);
   padding: 1.5rem var(--pad);
   margin-top: 1rem;
 }
@@ -525,7 +521,7 @@ main > h1 {
 
 .site-footer__modified p {
   font-size: 0.875rem;
-  color: #b9cfca;
+  color: var(--on-dark-soft);
 }
 
 .site-footer__social {
@@ -538,40 +534,16 @@ main > h1 {
   height: 2rem;
   padding: 6px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--on-dark);
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .site-footer__social a:hover .social-icon,
 .site-footer__social a:focus-visible .social-icon {
-  background-color: var(--gold-500);
+  background-color: var(--gold-300);
   transform: translateY(-2px);
 }
 
-/* ---------- 480px and up ---------- */
-
-@media screen and (min-width: 30rem) {
-  .hero__stats {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .course-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .site-footer__inner {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    text-align: left;
-  }
-
-  .site-footer__identity {
-    text-align: center;
-  }
-}
-
-/* Respect reduced-motion preferences */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

@@ -1,15 +1,23 @@
-/* ==========================================================
-   larger.css - tablet and desktop layouts
-   WDD 231 | Sydney Tamuno Tonye
-   Loaded after small.css. Sizes use em so they follow the
-   browser's user font-size setting.
-   ========================================================== */
+@media screen and (min-width: 30rem) {
+  .hero__stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 
-:root {
-  --pad: 1.5rem;
+  .course-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .site-footer__inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .site-footer__identity {
+    text-align: center;
+  }
 }
-
-/* ---------- 640px and up: real navigation ---------- */
 
 @media screen and (min-width: 40em) {
   .site-header__inner {
@@ -41,14 +49,13 @@
 
   .site-nav a[aria-current="page"] {
     box-shadow: inset 0 -3px 0 var(--gold-300);
+    padding-left: 0.9rem;
   }
 }
 
-/* ---------- 900px and up: two-column panels ---------- */
-
-@media screen and (min-width: 56.25em) {
-  .brand__name {
-    font-size: 1.15rem;
+@media screen and (min-width: 48em) {
+  :root {
+    --pad: 1.5rem;
   }
 
   main {
@@ -57,6 +64,16 @@
 
   .panel {
     padding: 2rem;
+  }
+
+  .site-footer {
+    padding-block: 2rem;
+  }
+}
+
+@media screen and (min-width: 56.25em) {
+  .brand__name {
+    font-size: 1.15rem;
   }
 
   .panel--hero {
@@ -74,11 +91,6 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .site-footer {
-    padding-block: 2rem;
-  }
-
-  /* Certificate section: intro beside the pathway list */
   .panel--certificate .panel__content {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -94,7 +106,7 @@
     grid-area: heading;
   }
 
-  .panel--certificate .panel__content > p {
+  .panel--certificate .panel__content>p {
     grid-area: intro;
   }
 
@@ -108,8 +120,6 @@
     margin-top: 0.5rem;
   }
 }
-
-/* ---------- 1200px and up: wider content, four card columns ---------- */
 
 @media screen and (min-width: 75em) {
   :root {
@@ -130,6 +140,3 @@
     object-fit: contain;
   }
 }
-
-/* ---------- 1200px and up: wider content, four card columns ---------- */
-

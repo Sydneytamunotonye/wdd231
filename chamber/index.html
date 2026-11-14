@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Port Harcourt Chamber of Commerce</title>
+  <meta name="description" content="The Port Harcourt Chamber of Commerce connects and promotes local businesses in Rivers State, Nigeria. See upcoming events, local weather, and featured members.">
+  <meta name="author" content="Sydney Tamunotonye">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Port Harcourt Chamber of Commerce">
+  <meta property="og:description" content="Helping businesses in the Garden City grow together. Join the Port Harcourt Chamber of Commerce in Rivers State, Nigeria.">
+  <meta property="og:image" content="https://sydneytamunotonye.github.io/wdd231/chamber/images/og-home.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Port Harcourt waterfront skyline at sunset with the Port Harcourt Chamber of Commerce logo">
+  <meta property="og:url" content="https://sydneytamunotonye.github.io/wdd231/chamber/index.html">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <meta name="theme-color" content="#0b5d3b">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <script src="scripts/common.js" defer></script>
+  <script src="scripts/home.js" type="module"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-wrap">
+      <a class="brand" href="index.html">
+        <img src="images/logo.svg" alt="Port Harcourt Chamber of Commerce logo" width="44" height="44">
+        <span class="brand-name">Port Harcourt <span>Chamber of Commerce</span></span>
+      </a>
+
+      <nav class="site-nav" id="siteNav" aria-label="Main">
+        <ul>
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-tools">
+        <button class="theme-btn" id="themeBtn" type="button" aria-label="Dark mode" aria-pressed="false">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/>
+          </svg>
+        </button>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-controls="siteNav" aria-expanded="false"></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <picture>
+        <source media="(min-width: 40em)" srcset="images/hero-large.svg" width="1600" height="700">
+        <img src="images/hero-small.svg" alt="The Port Harcourt waterfront skyline at sunset, with boats on the river" width="800" height="700" fetchpriority="high">
+      </picture>
+      <div class="hero-text">
+        <h1>Grow your business in the Garden City</h1>
+        <p>Connect with local leaders, reach new customers, and help shape the future of Port Harcourt commerce.</p>
+        <a class="cta-btn" href="join.html">Join the Chamber</a>
+      </div>
+    </section>
+
+    <div class="home-grid">
+      <section class="card events" aria-labelledby="eventsTitle">
+        <h2 id="eventsTitle">Upcoming Events</h2>
+        <ul class="card-body event-list">
+          <li class="event">
+            <time datetime="2026-11-26"><span>Nov</span> 26</time>
+            <div>
+              <h3>Business Networking Breakfast</h3>
+              <p>7:30 AM &middot; Chamber Hall, 15 Aba Road</p>
+            </div>
+          </li>
+          <li class="event">
+            <time datetime="2026-12-03"><span>Dec</span> 3</time>
+            <div>
+              <h3>Digital Skills for Small Businesses</h3>
+              <p>2:00 PM &middot; Rumuokoro Tech Hub</p>
+            </div>
+          </li>
+          <li class="event">
+            <time datetime="2026-12-12"><span>Dec</span> 12</time>
+            <div>
+              <h3>Garden City Year-End Trade Fair</h3>
+              <p>10:00 AM &middot; Liberation Stadium grounds</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card weather" aria-labelledby="weatherTitle">
+        <h2 id="weatherTitle">Current Weather</h2>
+        <div class="card-body" id="currentWeather" aria-live="polite">
+          <p class="status">Loading current weather&hellip;</p>
+        </div>
+      </section>
+
+      <section class="card forecast" aria-labelledby="forecastTitle">
+        <h2 id="forecastTitle">3-Day Forecast</h2>
+        <div class="card-body" id="forecast" aria-live="polite">
+          <p class="status">Loading forecast&hellip;</p>
+        </div>
+      </section>
+    </div>
+
+    <section class="spotlight-section" aria-labelledby="spotlightTitle">
+      <h2 id="spotlightTitle">Member Spotlights</h2>
+      <div id="spotlights" class="members gallery" aria-live="polite">
+        <p class="status">Loading member spotlights&hellip;</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <address class="contact">
+        <strong>Port Harcourt Chamber of Commerce</strong><br>
+        15 Aba Road, GRA Phase II<br>
+        Port Harcourt, Rivers State, Nigeria<br>
+        <a href="mailto:info@phcchamber.org">info@phcchamber.org</a><br>
+        <a href="tel:+2348035550100">+234 803 555 0100</a>
+      </address>
+
+      <div class="social">
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener">
+          <img src="images/youtube.svg" alt="YouTube" width="40" height="40" loading="lazy">
+        </a>
+        <a href="https://x.com/" target="_blank" rel="noopener">
+          <img src="images/x-twitter.svg" alt="X (formerly Twitter)" width="40" height="40" loading="lazy">
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
+          <img src="images/linkedin.svg" alt="LinkedIn" width="40" height="40" loading="lazy">
+        </a>
+      </div>
+
+      <div class="dev-info">
+        <p>WDD231 Class Project</p>
+        <p>Sydney Tamunotonye</p>
+        <p>&copy; <span id="currentyear"></span> Port Harcourt Chamber of Commerce</p>
+        <p id="lastModified"></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

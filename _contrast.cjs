@@ -1,4 +1,3 @@
-/* Verify WCAG contrast for every text/background pair the audit flagged. */
 const lum = (hex) => {
   const h = hex.replace("#", "");
   const [r, g, b] = [0, 2, 4].map((i) => {

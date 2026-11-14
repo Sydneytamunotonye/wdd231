@@ -72,7 +72,8 @@ img {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: var(--heading-font);
   line-height: 1.2;
   margin: 0 0 0.5rem;
@@ -272,7 +273,8 @@ main {
   gap: 1rem;
 }
 
-.member {
+.member,
+.card {
   background-color: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -280,14 +282,16 @@ main {
   overflow: hidden;
 }
 
-.member-head {
+.member-head,
+.card h2 {
   padding: 0.85rem 1rem 0.6rem;
   text-align: center;
   background-color: var(--surface-alt);
   border-bottom: 1px solid var(--line);
 }
 
-.member h2 {
+.member :is(h2, h3),
+.card h2 {
   font-size: 1.2rem;
   margin: 0;
 }
@@ -391,6 +395,190 @@ main {
   margin: 0 0 0.15rem;
 }
 
+/* ---------- Home: hero and call to action ---------- */
+
+.hero {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.hero img {
+  width: 100%;
+  max-height: 34rem;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+/* On phones the text panel overlaps the bottom of the image */
+.hero-text {
+  position: relative;
+  margin: -3rem 0.75rem 0;
+  padding: 1.1rem 1.25rem 1.25rem;
+  background-color: var(--primary-dark);
+  color: var(--footer-text);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.hero h1 {
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+
+.hero p {
+  margin: 0 0 1rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background-color: var(--secondary);
+  color: #1d2a24;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.cta-btn:hover {
+  background-color: #ffdc7a;
+  transform: translateY(-2px);
+}
+
+.cta-btn:focus-visible {
+  outline-color: #ffffff;
+}
+
+/* ---------- Home: events and weather cards ---------- */
+
+.home-grid {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card-body {
+  margin: 0;
+  padding: 0.75rem 1rem 1rem;
+}
+
+.event-list,
+.weather-details,
+.forecast-list {
+  list-style: none;
+}
+
+.event-list,
+.forecast-list {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.event,
+.forecast-list li {
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.event:last-child,
+.forecast-list li:last-child {
+  border-bottom: 0;
+}
+
+.event {
+  display: flex;
+  gap: 0.85rem;
+  align-items: center;
+}
+
+.event time {
+  flex-shrink: 0;
+  width: 3.4rem;
+  padding: 0.35rem 0;
+  background-color: var(--primary);
+  color: #ffffff;
+  font-family: var(--heading-font);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
+.event time span {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.event h3 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.event p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.weather-now {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.weather-now img {
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--surface-alt);
+  border-radius: 50%;
+}
+
+.temp {
+  margin: 0;
+  font-family: var(--heading-font);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.weather-details {
+  margin: 0.75rem 0 0;
+  padding: 0;
+  text-align: center;
+}
+
+.weather-desc {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.forecast-list li {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.forecast-list .day {
+  font-weight: 700;
+}
+
+.forecast-list .label {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* ---------- Home: member spotlights ---------- */
+
+.spotlight-section > h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
 /* ---------- Footer ---------- */
 
 .site-footer {
@@ -439,7 +627,8 @@ main {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .social a {
+  .social a,
+  .cta-btn {
     transition: none;
   }
 }

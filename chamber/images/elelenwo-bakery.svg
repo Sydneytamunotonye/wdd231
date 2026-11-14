@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Elelenwo Fresh Bakery logo">
+  <rect width="200" height="200" rx="24" fill="#7b3f1d"/>
+  <path d="M44 104c0-34 24-56 56-56s56 22 56 56z" fill="#f3c27a"/><path d="M74 66l10 30M100 58v38M126 66l-10 30" stroke="#b9712e" stroke-width="6" stroke-linecap="round"/><rect x="40" y="104" width="120" height="14" rx="7" fill="#f3c27a"/>
+  <text x="100" y="168" font-family="Verdana, Geneva, sans-serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="3">EFB</text>
+</svg>

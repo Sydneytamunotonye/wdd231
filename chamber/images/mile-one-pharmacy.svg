@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Mile One Family Pharmacy logo">
+  <rect width="200" height="200" rx="24" fill="#e6f6ee"/>
+  <rect x="82" y="34" width="36" height="96" rx="6" fill="#16a36a"/><rect x="52" y="64" width="96" height="36" rx="6" fill="#16a36a"/><circle cx="100" cy="82" r="10" fill="#e6f6ee"/>
+  <text x="100" y="168" font-family="Verdana, Geneva, sans-serif" font-size="34" font-weight="700" fill="#0b6b45" text-anchor="middle" letter-spacing="3">MOP</text>
+</svg>

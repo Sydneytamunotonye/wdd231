@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Garden City Logistics logo">
+  <rect width="200" height="200" rx="24" fill="#0b5d3b"/>
+  <rect x="44" y="52" width="74" height="50" rx="4" fill="#f2b632"/><path d="M118 66h22l16 18v18h-38z" fill="#ffffff"/><circle cx="70" cy="108" r="11" fill="#ffffff" stroke="#0b5d3b" stroke-width="5"/><circle cx="138" cy="108" r="11" fill="#ffffff" stroke="#0b5d3b" stroke-width="5"/>
+  <text x="100" y="168" font-family="Verdana, Geneva, sans-serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="3">GCL</text>
+</svg>

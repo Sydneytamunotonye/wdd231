@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Diobu Print and Design logo">
+  <rect width="200" height="200" rx="24" fill="#ffffff"/>
+  <circle cx="74" cy="70" r="30" fill="#00b4d8" opacity=".85"/><circle cx="126" cy="70" r="30" fill="#ef476f" opacity=".85"/><circle cx="100" cy="106" r="30" fill="#ffd166" opacity=".9"/><rect x="2" y="2" width="196" height="196" rx="23" fill="none" stroke="#222222" stroke-width="4"/>
+  <text x="100" y="168" font-family="Verdana, Geneva, sans-serif" font-size="34" font-weight="700" fill="#222222" text-anchor="middle" letter-spacing="3">DPD</text>
+</svg>

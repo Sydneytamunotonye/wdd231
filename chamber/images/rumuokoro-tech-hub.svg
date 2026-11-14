@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Rumuokoro Tech Hub logo">
+  <rect width="200" height="200" rx="24" fill="#1f1b4d"/>
+  <rect x="44" y="40" width="112" height="72" rx="8" fill="#6c63ff"/><path d="M82 62l-16 14 16 14M118 62l16 14-16 14M106 58l-12 36" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><rect x="80" y="112" width="40" height="10" fill="#6c63ff"/>
+  <text x="100" y="168" font-family="Verdana, Geneva, sans-serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="3">RTH</text>
+</svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Kalabari Craft Gallery logo">
+  <rect width="200" height="200" rx="24" fill="#5a1846"/>
+  <g fill="none" stroke="#ffd9a0" stroke-width="6"><path d="M50 44h100v76H50z"/><path d="M50 72h100M50 98h100M78 44v76M122 44v76"/></g><path d="M78 72l22-28 22 28-22 26z" fill="#e94f37"/>
+  <text x="100" y="168" font-family="Verdana, Geneva, sans-serif" font-size="34" font-weight="700" fill="#ffd9a0" text-anchor="middle" letter-spacing="3">KCG</text>
+</svg>

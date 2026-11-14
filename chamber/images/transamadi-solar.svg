@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Trans-Amadi Solar Solutions logo">
+  <rect width="200" height="200" rx="24" fill="#fff4d6"/>
+  <circle cx="100" cy="56" r="18" fill="#f2a30f"/><g stroke="#f2a30f" stroke-width="5" stroke-linecap="round"><path d="M100 22v10M100 80v10M66 56h10M124 56h10M76 32l7 7M117 73l7 7M124 32l-7 7M83 73l-7 7"/></g><path d="M52 126l14-30h68l14 30z" fill="#1d4e89"/><path d="M84 96l-4 30M116 96l4 30M59 111h82" stroke="#fff4d6" stroke-width="3"/>
+  <text x="100" y="168" font-family="Verdana, Geneva, sans-serif" font-size="34" font-weight="700" fill="#7a4a00" text-anchor="middle" letter-spacing="3">TAS</text>
+</svg>

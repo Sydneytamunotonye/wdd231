@@ -1,0 +1,110 @@
+[
+  {
+    "name": "Garden City Logistics",
+    "tagline": "Moving the Niger Delta forward",
+    "address": "42 Trans-Amadi Industrial Layout, Port Harcourt",
+    "phone": "+234 803 555 0141",
+    "email": "hello@gardencitylogistics.ng",
+    "website": "https://www.gardencitylogistics.ng",
+    "image": "garden-city-logistics.svg",
+    "membershipLevel": 3,
+    "industry": "Logistics & Shipping",
+    "founded": 2009
+  },
+  {
+    "name": "Bonny Bay Seafood Grill",
+    "tagline": "Fresh from the creeks to your table",
+    "address": "7 Peter Odili Road, Port Harcourt",
+    "phone": "+234 806 555 0172",
+    "email": "reservations@bonnybaygrill.ng",
+    "website": "https://www.bonnybaygrill.ng",
+    "image": "bonny-bay-grill.svg",
+    "membershipLevel": 2,
+    "industry": "Restaurant",
+    "founded": 2016
+  },
+  {
+    "name": "Rumuokoro Tech Hub",
+    "tagline": "Co-working, coding classes, and startup support",
+    "address": "18 Ikwerre Road, Rumuokoro, Port Harcourt",
+    "phone": "+234 809 555 0118",
+    "email": "team@rumuokorotechhub.ng",
+    "website": "https://www.rumuokorotechhub.ng",
+    "image": "rumuokoro-tech-hub.svg",
+    "membershipLevel": 3,
+    "industry": "Technology & Training",
+    "founded": 2019
+  },
+  {
+    "name": "Okrika Waterfront Boatworks",
+    "tagline": "Boat building and marine engine repair",
+    "address": "3 Jetty Road, Okrika Waterfront, Port Harcourt",
+    "phone": "+234 802 555 0163",
+    "email": "service@okrikaboatworks.ng",
+    "website": "https://www.okrikaboatworks.ng",
+    "image": "okrika-boatworks.svg",
+    "membershipLevel": 1,
+    "industry": "Marine Services",
+    "founded": 2004
+  },
+  {
+    "name": "Trans-Amadi Solar Solutions",
+    "tagline": "Clean, reliable power for homes and businesses",
+    "address": "25 Woji Road, GRA Phase II, Port Harcourt",
+    "phone": "+234 818 555 0195",
+    "email": "sales@transamadisolar.ng",
+    "website": "https://www.transamadisolar.ng",
+    "image": "transamadi-solar.svg",
+    "membershipLevel": 2,
+    "industry": "Renewable Energy",
+    "founded": 2014
+  },
+  {
+    "name": "Elelenwo Fresh Bakery",
+    "tagline": "Warm bread and pastries baked every morning",
+    "address": "9 Elelenwo Street, Port Harcourt",
+    "phone": "+234 805 555 0127",
+    "email": "orders@elelenwobakery.ng",
+    "website": "https://www.elelenwobakery.ng",
+    "image": "elelenwo-bakery.svg",
+    "membershipLevel": 1,
+    "industry": "Food & Bakery",
+    "founded": 2011
+  },
+  {
+    "name": "Diobu Print and Design",
+    "tagline": "Signs, banners, and brand printing",
+    "address": "56 Ikwerre Road, Mile 1 Diobu, Port Harcourt",
+    "phone": "+234 807 555 0184",
+    "email": "print@diobuprint.ng",
+    "website": "https://www.diobuprint.ng",
+    "image": "diobu-print.svg",
+    "membershipLevel": 1,
+    "industry": "Printing & Graphic Design",
+    "founded": 2008
+  },
+  {
+    "name": "Mile One Family Pharmacy",
+    "tagline": "Caring for the community since day one",
+    "address": "12 Station Road, Mile 1, Port Harcourt",
+    "phone": "+234 813 555 0136",
+    "email": "care@mileonepharmacy.ng",
+    "website": "https://www.mileonepharmacy.ng",
+    "image": "mile-one-pharmacy.svg",
+    "membershipLevel": 2,
+    "industry": "Health & Pharmacy",
+    "founded": 2001
+  },
+  {
+    "name": "Kalabari Craft Gallery",
+    "tagline": "Handmade art and textiles from the Rivers region",
+    "address": "4 Old Aba Road, Rumuomasi, Port Harcourt",
+    "phone": "+234 810 555 0159",
+    "email": "visit@kalabaricraft.ng",
+    "website": "https://www.kalabaricraft.ng",
+    "image": "kalabari-craft.svg",
+    "membershipLevel": 3,
+    "industry": "Arts & Culture",
+    "founded": 2013
+  }
+]

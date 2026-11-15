@@ -13,6 +13,7 @@
   --header-text: #ffffff;
   --footer-bg: #073f28;
   --footer-text: #e9f2ec;
+  --error: #b3261e;
 
   --heading-font: "Poppins", "Segoe UI", Arial, sans-serif;
   --body-font: "Open Sans", "Segoe UI", Arial, sans-serif;
@@ -31,6 +32,7 @@
   --line: #34493f;
   --header-bg: #07301f;
   --footer-bg: #07301f;
+  --error: #ff9b91;
   --shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
 }
 
@@ -45,6 +47,7 @@
     --line: #34493f;
     --header-bg: #07301f;
     --footer-bg: #07301f;
+    --error: #ff9b91;
     --shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
   }
 }
@@ -579,6 +582,250 @@ main {
   margin-bottom: 1rem;
 }
 
+/* ---------- Join: application form ---------- */
+
+.join-layout {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.req {
+  color: var(--error);
+  font-weight: 700;
+}
+
+.join-form fieldset {
+  margin: 0 0 1.25rem;
+  padding: 0.75rem 1rem 0.25rem;
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.join-form legend {
+  padding: 0 0.4rem;
+  font-family: var(--heading-font);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--link);
+}
+
+.join-form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.join-form :is(input, select, textarea) {
+  display: block;
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.65rem 0.75rem;
+  font-family: var(--body-font);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text);
+  background-color: var(--bg);
+  border: 1px solid var(--muted);
+  border-radius: 0.5rem;
+}
+
+.join-form textarea {
+  resize: vertical;
+}
+
+.join-form :is(input, select, textarea):focus {
+  border-color: var(--link);
+}
+
+/* Only flag a field after the user has interacted with it */
+.join-form :is(input, select, textarea):user-invalid {
+  border-color: var(--error);
+  box-shadow: inset 4px 0 0 var(--error);
+}
+
+.join-form .submit-btn {
+  display: block;
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  font-family: var(--body-font);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.join-form .submit-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+/* ---------- Join: membership level cards ---------- */
+
+.levels {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.levels h2 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+:is(.level-card, .level-modal).np {
+  --accent: #2f9e6a;
+}
+
+:is(.level-card, .level-modal).bronze {
+  --accent: #b0703c;
+}
+
+:is(.level-card, .level-modal).silver {
+  --accent: #9aa5ad;
+}
+
+:is(.level-card, .level-modal).gold {
+  --accent: #f2b632;
+}
+
+.level-card {
+  padding: 1rem 1.25rem;
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 6px solid var(--accent);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  animation: level-in 0.7s ease-out both;
+}
+
+/* The cards arrive one after another when the page loads */
+.level-card:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+
+.level-card:nth-of-type(3) {
+  animation-delay: 0.4s;
+}
+
+.level-card:nth-of-type(4) {
+  animation-delay: 0.6s;
+}
+
+@keyframes level-in {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+    background-color: var(--surface-alt);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+    background-color: var(--surface);
+  }
+}
+
+.level-card h3 {
+  font-size: 1.15rem;
+  margin: 0 0 0.2rem;
+}
+
+.level-card p {
+  margin: 0 0 0.5rem;
+  color: var(--muted);
+}
+
+.level-link {
+  font-weight: 700;
+}
+
+/* ---------- Join: membership benefit modals ---------- */
+
+.level-modal {
+  width: min(32rem, calc(100% - 2rem));
+  padding: 1.5rem;
+  color: var(--text);
+  background-color: var(--surface);
+  border: 0;
+  border-top: 8px solid var(--accent);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.level-modal::backdrop {
+  background-color: rgba(7, 30, 20, 0.65);
+}
+
+.level-modal .fee {
+  margin: 0 0 0.75rem;
+  font-weight: 700;
+  color: var(--link);
+}
+
+.level-modal ul {
+  margin: 0 0 1.25rem;
+  padding-left: 1.25rem;
+}
+
+.level-modal li {
+  margin-bottom: 0.35rem;
+}
+
+.close-btn {
+  padding: 0.55rem 1.5rem;
+  font-family: var(--body-font);
+  font-weight: 700;
+  color: #ffffff;
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+/* ---------- Thank you: application summary ---------- */
+
+.summary {
+  max-width: 40rem;
+  margin-bottom: 1.5rem;
+}
+
+.summary-list {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  margin: 0;
+}
+
+.summary-list :is(dt, dd) {
+  margin: 0;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.summary-list dt {
+  padding-right: 1rem;
+  font-weight: 700;
+}
+
+.summary-list dd {
+  overflow-wrap: anywhere;
+}
+
+.summary-list :is(dt, dd):nth-last-child(-n + 2) {
+  border-bottom: 0;
+}
+
+.back-link {
+  margin: 0;
+}
+
 /* ---------- Footer ---------- */
 
 .site-footer {
@@ -630,5 +877,9 @@ main {
   .social a,
   .cta-btn {
     transition: none;
+  }
+
+  .level-card {
+    animation: none;
   }
 }

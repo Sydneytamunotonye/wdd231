@@ -1,9 +1,4 @@
 import { courses } from "./courses.mjs";
-
-/* ------------------------------------------------------------------ *
- * 1. Footer dates
- * ------------------------------------------------------------------ */
-
 const yearEl = document.querySelector("#currentyear");
 const modifiedEl = document.querySelector("#lastModified");
 

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join | Port Harcourt Chamber of Commerce</title>
+  <meta name="description" content="Become a member of the Port Harcourt Chamber of Commerce. Compare membership levels and apply online to grow your business in Rivers State, Nigeria.">
+  <meta name="author" content="Sydney Tamunotonye">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Join | Port Harcourt Chamber of Commerce">
+  <meta property="og:description" content="Apply for membership in the Port Harcourt Chamber of Commerce and connect with local businesses across Rivers State.">
+  <meta property="og:image" content="https://sydneytamunotonye.github.io/wdd231/chamber/images/og-home.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Port Harcourt Chamber of Commerce logo">
+  <meta property="og:url" content="https://sydneytamunotonye.github.io/wdd231/chamber/join.html">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <meta name="theme-color" content="#0b5d3b">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <script src="scripts/common.js" defer></script>
+  <script src="scripts/join.mjs" type="module"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-wrap">
+      <a class="brand" href="index.html">
+        <img src="images/logo.svg" alt="Port Harcourt Chamber of Commerce logo" width="44" height="44">
+        <span class="brand-name">Port Harcourt <span>Chamber of Commerce</span></span>
+      </a>
+
+      <nav class="site-nav" id="siteNav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html" class="active" aria-current="page">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-tools">
+        <button class="theme-btn" id="themeBtn" type="button" aria-label="Dark mode" aria-pressed="false">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/>
+          </svg>
+        </button>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-controls="siteNav" aria-expanded="false"></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h1>Join the Chamber</h1>
+    <p class="intro">
+      Become a member of the Port Harcourt Chamber of Commerce and connect your
+      business with leaders, partners, and customers across Rivers State.
+      Fill out the application below. Fields marked with <span class="req">*</span> are required.
+    </p>
+
+    <div class="join-layout">
+      <form class="join-form" action="thankyou.html" method="get">
+        <fieldset>
+          <legend>About You</legend>
+
+          <label>First Name <span class="req">*</span>
+            <input type="text" name="first" title="Enter your first name" autocomplete="given-name" required>
+          </label>
+
+          <label>Last Name <span class="req">*</span>
+            <input type="text" name="last" title="Enter your last name" autocomplete="family-name" required>
+          </label>
+
+          <label>Organizational Title
+            <input type="text" name="orgtitle" autocomplete="organization-title"
+                   pattern="[A-Za-z\- ]{7,}"
+                   title="Your title within your organization: at least 7 characters, using only letters, hyphens, and spaces">
+          </label>
+
+          <label>Email Address <span class="req">*</span>
+            <input type="email" name="email" title="Enter a valid email address, for example name@example.com"
+                   autocomplete="email" placeholder="name@example.com" required>
+          </label>
+
+          <label>Mobile Phone Number <span class="req">*</span>
+            <input type="tel" name="phone" title="Enter your mobile phone number, for example +234 803 555 0100"
+                   autocomplete="tel" required>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>About Your Business</legend>
+
+          <label>Business / Organization Name <span class="req">*</span>
+            <input type="text" name="business" title="Enter the name of your business or organization"
+                   autocomplete="organization" required>
+          </label>
+
+          <label>Membership Level <span class="req">*</span>
+            <select name="membership" title="Choose a membership level" required>
+              <option value="" disabled selected>Choose a membership level&hellip;</option>
+              <option value="np">NP Membership (non profit, no fee)</option>
+              <option value="bronze">Bronze Membership</option>
+              <option value="silver">Silver Membership</option>
+              <option value="gold">Gold Membership</option>
+            </select>
+          </label>
+
+          <label>Business / Organization Description
+            <textarea name="description" rows="4"
+                      title="Briefly describe what your business or organization does"></textarea>
+          </label>
+        </fieldset>
+
+        <input type="hidden" name="timestamp" id="timestamp">
+
+        <input type="submit" class="submit-btn" value="Submit Application">
+      </form>
+
+      <section class="levels" aria-labelledby="levels-heading">
+        <h2 id="levels-heading">Membership Levels</h2>
+
+        <article class="level-card np">
+          <h3>NP Membership</h3>
+          <p>For non profit organizations. No fee.</p>
+          <a href="#np-modal" class="level-link" data-modal="np-modal">Learn more about NP Membership</a>
+        </article>
+
+        <article class="level-card bronze">
+          <h3>Bronze Membership</h3>
+          <p>&#8358;50,000 per year</p>
+          <a href="#bronze-modal" class="level-link" data-modal="bronze-modal">Learn more about Bronze Membership</a>
+        </article>
+
+        <article class="level-card silver">
+          <h3>Silver Membership</h3>
+          <p>&#8358;150,000 per year</p>
+          <a href="#silver-modal" class="level-link" data-modal="silver-modal">Learn more about Silver Membership</a>
+        </article>
+
+        <article class="level-card gold">
+          <h3>Gold Membership</h3>
+          <p>&#8358;300,000 per year</p>
+          <a href="#gold-modal" class="level-link" data-modal="gold-modal">Learn more about Gold Membership</a>
+        </article>
+      </section>
+    </div>
+
+    <dialog id="np-modal" class="level-modal np" aria-labelledby="np-title">
+      <h2 id="np-title">NP Membership</h2>
+      <p class="fee">No fee &ndash; for registered non profit organizations</p>
+      <ul>
+        <li>Listing in the online member directory</li>
+        <li>Monthly chamber newsletter</li>
+        <li>Invitations to community networking mixers</li>
+        <li>Free volunteer and community event postings</li>
+      </ul>
+      <button type="button" class="close-btn">Close</button>
+    </dialog>
+
+    <dialog id="bronze-modal" class="level-modal bronze" aria-labelledby="bronze-title">
+      <h2 id="bronze-title">Bronze Membership</h2>
+      <p class="fee">&#8358;50,000 per year</p>
+      <ul>
+        <li>Everything in NP Membership</li>
+        <li>Two seats at our quarterly small business training</li>
+        <li>10% discount on chamber event tickets</li>
+        <li>Logo on the member directory listing</li>
+      </ul>
+      <button type="button" class="close-btn">Close</button>
+    </dialog>
+
+    <dialog id="silver-modal" class="level-modal silver" aria-labelledby="silver-title">
+      <h2 id="silver-title">Silver Membership</h2>
+      <p class="fee">&#8358;150,000 per year</p>
+      <ul>
+        <li>Everything in Bronze Membership</li>
+        <li>Eligible for home page spotlight positions</li>
+        <li>Unlimited seats at chamber training workshops</li>
+        <li>25% discount on chamber event tickets</li>
+        <li>One featured post per quarter in the newsletter</li>
+      </ul>
+      <button type="button" class="close-btn">Close</button>
+    </dialog>
+
+    <dialog id="gold-modal" class="level-modal gold" aria-labelledby="gold-title">
+      <h2 id="gold-title">Gold Membership</h2>
+      <p class="fee">&#8358;300,000 per year</p>
+      <ul>
+        <li>Everything in Silver Membership</li>
+        <li>Priority home page spotlight placement</li>
+        <li>Exhibitor booth at the annual Port Harcourt Business Expo</li>
+        <li>VIP access to special events and the annual gala</li>
+        <li>50% discount on chamber event tickets</li>
+        <li>Banner advertising on the chamber website</li>
+      </ul>
+      <button type="button" class="close-btn">Close</button>
+    </dialog>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <address class="contact">
+        <strong>Port Harcourt Chamber of Commerce</strong><br>
+        15 Aba Road, GRA Phase II<br>
+        Port Harcourt, Rivers State, Nigeria<br>
+        <a href="mailto:info@phcchamber.org">info@phcchamber.org</a><br>
+        <a href="tel:+2348035550100">+234 803 555 0100</a>
+      </address>
+
+      <div class="social">
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener">
+          <img src="images/youtube.svg" alt="YouTube" width="40" height="40" loading="lazy">
+        </a>
+        <a href="https://x.com/" target="_blank" rel="noopener">
+          <img src="images/x-twitter.svg" alt="X (formerly Twitter)" width="40" height="40" loading="lazy">
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
+          <img src="images/linkedin.svg" alt="LinkedIn" width="40" height="40" loading="lazy">
+        </a>
+      </div>
+
+      <div class="dev-info">
+        <p>WDD231 Class Project</p>
+        <p>Sydney Tamunotonye</p>
+        <p>&copy; <span id="currentyear"></span> Port Harcourt Chamber of Commerce</p>
+        <p id="lastModified"></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
